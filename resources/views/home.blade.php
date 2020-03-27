@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
@@ -46,7 +47,19 @@
         @endforeach
       
   </div>
+
   <div class="row" style="margin-top: 20px">
+    <h5>10 Provinsi Tertinggi penyebaran Covid19</h5>
+    <div class="col-md-12">
+      {!! $chart->container() !!}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
+      {!! $chart->script() !!}
+    </div>
+  </div>
+ 
+  
+ 
+  <div class="row" style="margin-top: 30px">
     <div class="col-md-12">
         <h6>Jumlah Kasus tiap provinsi</h6>
 
@@ -74,9 +87,14 @@
               @endforeach
             </tbody>
           </table>
+        
+
     </div>
+
+ 
 </div>
   </div>
+ 
 </body>
 
 <script>
@@ -88,8 +106,8 @@
         });
       });
     });
-    </script>
+  </script>
 
-
+  
 
 </html>
